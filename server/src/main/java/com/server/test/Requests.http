@@ -1,0 +1,20 @@
+POST http://localhost:8081/actuator/shutdown
+###
+POST http://localhost:8082/actuator/shutdown
+###
+POST http://localhost:8083/actuator/shutdown
+###
+GET localhost:8083/java
+###
+GET localhost:8083/dice/20d6
+###
+GET localhost:8083/user
+###
+POST http://localhost:8083/user
+Content-Type: application/json
+
+{
+  "userName": "second"
+}
+###
+DELETE http://localhost:8081/user/2

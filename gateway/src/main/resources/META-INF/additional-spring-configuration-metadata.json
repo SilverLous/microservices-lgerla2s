@@ -1,0 +1,8 @@
+{
+  "properties": [
+    {
+      "name": "management.endpoint.web.exposute.include",
+      "type": "java.lang.String",
+      "description": "Description for management.endpoint.web.exposute.include."
+  }
+] }

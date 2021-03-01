@@ -1,0 +1,32 @@
+server:
+  port: 8083
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8080/eureka
+
+management:
+  endpoint:
+    shutdown:
+      enabled: true
+
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
+spring:
+  application:
+    name: eureka-gateway
+  cloud:
+    gateway:
+      routes:
+        - id: diceService
+          uri: lb://EUREKA-DICE-THROWER
+          predicates:
+            - Path=/dice/**
+        - id: userService
+          uri: lb://EUREKA-USER-DATABASE
+          predicates:
+            - Path=/user
