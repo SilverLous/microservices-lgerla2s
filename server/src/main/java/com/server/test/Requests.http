@@ -6,17 +6,16 @@ POST http://localhost:8083/actuator/shutdown
 ### Diese Requests fahren die Services herunter
 
 
-GET localhost:8083/java
-###
 GET localhost:8083/dice/20d6
-###
+### Wirft 20 6-Seitige Würfel
 GET localhost:8083/user
-###
+### Gibt die Postgres Sql datenbank Benutzer wieder
 POST http://localhost:8083/user
 Content-Type: application/json
 
 {
   "userName": "second"
 }
-###
+### Fügt einen Benutzer hinzu namens second
 DELETE http://localhost:8081/user/2
+### Löscht den Benutzer mit der Id 2 [Funktioniert nicht wenn man es über den Gateway routet]
