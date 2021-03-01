@@ -3,7 +3,9 @@ POST http://localhost:8081/actuator/shutdown
 POST http://localhost:8082/actuator/shutdown
 ###
 POST http://localhost:8083/actuator/shutdown
-###
+### Diese Requests fahren die Services herunter
+
+
 GET localhost:8083/java
 ###
 GET localhost:8083/dice/20d6
